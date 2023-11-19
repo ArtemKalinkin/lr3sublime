@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static final Scanner scanner = new Scanner(System.in);
+    public static final Scanner scanner = new Scanner(System.in, "windows-1251");
 
     public static void main(String[] args) {
         int number;

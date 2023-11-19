@@ -487,13 +487,13 @@ public class AuxiliaryClass {
                         addNewContinent(continentList);
                         if (continentList.size() == 6)
                             System.out.println("Вы ввели все континенты");
-                    } while ((continentList.size() < 6) && (answerYesOrNo("Желаете добавить еще один континент?")));
+                    } while ((continentList.size() < 6) & (answerYesOrNo("Желаете добавить еще один континент?")));
                 else
                     do {
                         removeContinentFromList(continentList);
                         if (continentList.isEmpty())
                             System.out.println("Вы удалили все континенты");
-                    } while ((!continentList.isEmpty()) && (answerYesOrNo("Желаете удалить еще один континент?")));
+                    } while ((!continentList.isEmpty()) & (answerYesOrNo("Желаете удалить еще один континент?")));
                 break;
             case 2:
                 numberOfContinent = AuxiliaryClass.chooseContinent(continentList);
@@ -504,7 +504,7 @@ public class AuxiliaryClass {
                 else
                     do {
                         continentList.get(numberOfContinent).removeCountryFromList();
-                    } while (answerYesOrNo("Желаете удалить еще одну страну?"));
+                    } while ((!continentList.getListOfCountries().isEmpty()) & (answerYesOrNo("Желаете удалить еще одну страну?")));
                 break;
             case 3:
                 numberOfContinent = AuxiliaryClass.chooseContinent(continentList);
@@ -524,7 +524,7 @@ public class AuxiliaryClass {
                     }
                     do {
                         countries.get(numberOfCountry).removeSubjectFromList();
-                    } while (answerYesOrNo("Желаете удалить еще один субъект?"));
+                    } while ((!countries.getListOfSubjects().isEmpty()) & (answerYesOrNo("Желаете удалить еще один субъект?")));
                 }
                 break;
             case 4:
@@ -551,7 +551,7 @@ public class AuxiliaryClass {
                     }
                     do {
                         subjects.get(numberOfSubject).removeCityFromList();
-                    } while (answerYesOrNo("Желаете удалить еще один город?"));
+                    } while ((!subjects.getListOfCities().isEmpty()) & (answerYesOrNo("Желаете удалить еще один город?")));
                 }
                 break;
             case 5:
@@ -584,7 +584,7 @@ public class AuxiliaryClass {
                     }
                     do {
                         cities.get(numberOfCity).removeEnterpriseFromList();
-                    } while (answerYesOrNo("Желаете удалить еще одно предприятие?"));
+                    } while ((!cities.getListOfEnterprises().isEmpty()) & (answerYesOrNo("Желаете удалить еще одно предприятие?")));
                 }
                 countries.get(numberOfCountry).setNetProfitFromEnterprises(
                         countries.get(numberOfCountry).calculateProfitFromEnterprises());

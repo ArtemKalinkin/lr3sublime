@@ -201,13 +201,10 @@ public class Continent {
 
     public void removeCountryFromList() {
         int number;
-        do {
-            number = chooseCountry();
-            Country.tableHeader();
-            listOfCountries.get(number).output(0);
-            if (AuxiliaryClass.answerYesOrNo("Вы действительно желаете удалить данную страну из списка?"))
-                listOfCountries.remove(number);
-        } while ((!listOfCountries.isEmpty()) ||
-                (AuxiliaryClass.answerYesOrNo("Желаете удалить какую-либо другую страну из списка?")));
+        number = chooseCountry();
+        Country.tableHeader();
+        listOfCountries.get(number).output(0);
+        if (AuxiliaryClass.answerYesOrNo("Вы действительно желаете удалить данную страну из списка?"))
+            listOfCountries.remove(number);
     }
 }
