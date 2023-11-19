@@ -504,7 +504,8 @@ public class AuxiliaryClass {
                 else
                     do {
                         continentList.get(numberOfContinent).removeCountryFromList();
-                    } while ((!continentList.getListOfCountries().isEmpty()) & (answerYesOrNo("Желаете удалить еще одну страну?")));
+                    } while ((!continentList.get(numberOfContinent).getListOfCountries().isEmpty())
+                            & (answerYesOrNo("Желаете удалить еще одну страну?")));
                 break;
             case 3:
                 numberOfContinent = AuxiliaryClass.chooseContinent(continentList);
@@ -524,7 +525,8 @@ public class AuxiliaryClass {
                     }
                     do {
                         countries.get(numberOfCountry).removeSubjectFromList();
-                    } while ((!countries.getListOfSubjects().isEmpty()) & (answerYesOrNo("Желаете удалить еще один субъект?")));
+                    } while ((!countries.get(numberOfCountry).getListOfSubjects().isEmpty())
+                            & (answerYesOrNo("Желаете удалить еще один субъект?")));
                 }
                 break;
             case 4:
@@ -551,7 +553,8 @@ public class AuxiliaryClass {
                     }
                     do {
                         subjects.get(numberOfSubject).removeCityFromList();
-                    } while ((!subjects.getListOfCities().isEmpty()) & (answerYesOrNo("Желаете удалить еще один город?")));
+                    } while ((!subjects.get(numberOfSubject).getListOfCities().isEmpty())
+                            & (answerYesOrNo("Желаете удалить еще один город?")));
                 }
                 break;
             case 5:
@@ -584,7 +587,8 @@ public class AuxiliaryClass {
                     }
                     do {
                         cities.get(numberOfCity).removeEnterpriseFromList();
-                    } while ((!cities.getListOfEnterprises().isEmpty()) & (answerYesOrNo("Желаете удалить еще одно предприятие?")));
+                    } while ((!cities.get(numberOfCity).getListOfEnterprises().isEmpty())
+                            & (answerYesOrNo("Желаете удалить еще одно предприятие?")));
                 }
                 countries.get(numberOfCountry).setNetProfitFromEnterprises(
                         countries.get(numberOfCountry).calculateProfitFromEnterprises());
